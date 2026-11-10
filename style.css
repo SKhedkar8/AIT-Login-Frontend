@@ -1,0 +1,355 @@
+?variant="document" id="62841" title="AIT Frontend CSS"}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e8f0ff, #f5f8ff, #dce8ff);
+    padding: 20px;
+}
+
+.container {
+    width: 900px;
+    min-height: 540px;
+    display: flex;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(20, 50, 100, 0.15);
+}
+
+/* Welcome Section */
+
+.welcome-section {
+    width: 45%;
+    background: linear-gradient(145deg, #123b85, #2563eb, #4986ed);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.welcome-section h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.welcome-section p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #e1ebff;
+}
+
+.welcome-icon {
+    margin-top: 45px;
+    width: 115px;
+    height: 115px;
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+/* Form Section */
+
+.form-section {
+    width: 55%;
+    padding: 55px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-section h2 {
+    font-size: 29px;
+    color: #173b72;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #7b8495;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+form label {
+    display: block;
+    color: #344563;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+form input {
+    width: 100%;
+    height: 47px;
+    padding: 0 14px;
+    border: 1px solid #dce3ef;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    margin-bottom: 22px;
+    transition: 0.3s;
+}
+
+form input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+form button {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #1d4ed8, #3b82f6);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+.switch-text {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #687386;
+}
+
+.switch-text a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.switch-text a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    margin-top: 18px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 700px) {
+    .container {
+        width: 100%;
+        max-width: 450px;
+        flex-direction: column;
+    }
+
+    .welcome-section {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .welcome-section h1 {
+        font-size: 26px;
+    }
+
+    .welcome-icon {
+        display: none;
+    }
+
+    .form-section {
+        width: 100%;
+        padding: 35px 25px;
+    }
+}
+/* AIT Dashboard */
+
+.dashboard {
+    width: 100%;
+    animation: fadeIn 0.6s ease;
+}
+
+.dashboard h1 {
+    font-size: 32px;
+    color: #173b72;
+    margin-bottom: 15px;
+}
+
+.dashboard h2 {
+    font-size: 23px;
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+
+.dashboard p {
+    color: #64748b;
+    font-size: 15px;
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+/* User Information Card */
+
+.dashboard p:nth-of-type(2),
+.dashboard p:nth-of-type(3) {
+    background: #f1f5ff;
+    padding: 15px;
+    border-radius: 9px;
+    border-left: 4px solid #2563eb;
+    color: #334155;
+}
+
+/* Logout Button */
+
+.dashboard button {
+    width: 140px;
+    height: 45px;
+    margin-top: 15px;
+    background: linear-gradient(90deg, #1d4ed8, #3b82f6);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dashboard button:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.25);
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Dashboard */
+
+@media (max-width: 700px) {
+    .dashboard h1 {
+        font-size: 25px;
+    }
+
+    .dashboard h2 {
+        font-size: 20px;
+    }
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    padding-right: 65px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 47px;
+    border: none;
+    background: transparent;
+    color: #2563eb;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: #1e40af;
+}
+/* Improved Input Focus */
+.form-section input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    transition: 0.3s ease;
+}
+
+/* Improved Message Styling */
+#message {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Button Hover Effect */
+.form-section form button[type="submit"] {
+    transition: all 0.3s ease;
+}
+
+.form-section form button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* Disabled Button */
+.form-section button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Password Toggle */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    padding-right: 65px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 47px;
+    border: none;
+    background: transparent;
+    color: #2563eb;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: #1e40af;
+}
